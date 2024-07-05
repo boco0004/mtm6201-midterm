@@ -4,5 +4,14 @@ body {
 
 .nav-bar {
     background-color: black;
-    font-family: lato;
+}
+
+a:link {
+    
+}
+
+ul {
+    list-style: none;
+    color: white;
+    font-family: "Lato", sans-serif;
 }
