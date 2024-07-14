@@ -294,15 +294,89 @@ h1 {
 .about-section {
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 .about-img, .about-content {
     flex: 1;
 }
 
+.about-content {
+    margin-top: 20px;
+}
+
+.about-content p:first-child {
+    color: #D69E3D;
+    text-transform: uppercase;
+}
+
+.about-content > h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about-content > button {
+    text-transform: uppercase;
+    background-color: black;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+}
+
+/* TESTIMONIAL SECTION */
+
+.testimonial-section {
+    margin-top: 80px;
+    background-color: black;
+}
+
+.testimonials-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.testimonials-content > div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.testimonials-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.quote {
+    color: white;
+}
+
+.name {
+    color: #D69E3D;
+}
+
+
+
+
+/* FOOTER */
+
+.site-footer {
+    background-color: black;
+    color:#f3f0e9;
+    text-align: center;
+    font-family: 'Karla';
+    padding: 15px 0 45px 0;
+}
+
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 480px) {
     h1 {
         font-size: 2.027rem;
     }
@@ -320,12 +394,12 @@ h1 {
     }
 
     button {
-        font-size: 12px;
+        font-size: 1rem;
     }
     
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
     h1 {
         font-size: 2.986rem;
     }
@@ -343,7 +417,30 @@ h1 {
     }
 
     button {
-        font-size: 12px;
+        font-size: 1rem;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 3.815rem;
+    }
+
+    h2 {
+        font-size: 3.052rem;
+    }
+
+    h3 {
+        font-size:  1.953rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
     }
     
 }
