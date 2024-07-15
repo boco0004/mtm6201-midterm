@@ -79,6 +79,12 @@ nav {
 
 nav a {
     color: white;
+    transition: color 0.2s linear;
+}
+
+a:hover {
+    color: #966F2C;
+    cursor: pointer;
 }
 
 nav ul {
@@ -93,8 +99,9 @@ nav ul li {
     font-weight: bold;
 }
 
+
 /* removes underline from all links */
-a:hover, a:link, a:visited { 
+a { 
     text-decoration: none;
  }
 
@@ -135,9 +142,16 @@ h1 {
 .explore-btn {
     background-color: white;
     font-weight: 800;
-    border: none;
     padding: 12px;
+    border: none;
+    transition: all 0.2s linear;
+}
 
+.explore-btn:hover {
+    background-color: #966F2C;
+    color: white;
+    border:3px solid white;
+    cursor: pointer;
 }
 
 /* WELCOME SECTION*/
@@ -275,6 +289,13 @@ h1 {
     border: none;
     padding: 12px;
     font-weight: 900;
+    transition: all 0.2s linear;
+}
+
+.menu-btn:hover {
+    background-color: #966F2C;
+    color: white;
+    border:3px solid white;
 }
 
 .locations {
@@ -287,6 +308,15 @@ h1 {
     border: 3px solid white;
     padding: 6px;
     font-weight: 900;
+    transition: all 0.2s linear;
+}
+
+
+.loc-btn:hover {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
 }
 
 /* ABOUT SECTION */
@@ -295,6 +325,7 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
+    padding-bottom: 80px;
 }
 
 .about-img, .about-content {
@@ -315,7 +346,7 @@ h1 {
     text-transform: uppercase;
 }
 
-.about-content > button {
+.learn-btn {
     text-transform: uppercase;
     background-color: black;
     border: none;
@@ -323,13 +354,30 @@ h1 {
     font-weight: 600;
     color: white;
     margin-top: 10px;
+    transition: all 0.2s linear;
+}
+
+.learn-btn:hover {
+    background-color: #966F2C;
+    color: white;
+    cursor: pointer;
 }
 
 /* TESTIMONIAL SECTION */
 
 .testimonial-section {
-    margin-top: 80px;
+    padding-top: 50px;
     background-color: black;
+}
+
+.testimonial-section p {
+    color: #D69E3D;
+    text-transform: uppercase;
+}
+
+.testimonial-section h2 {
+    color: white;
+    text-transform: uppercase;
 }
 
 .testimonials-content {
@@ -345,13 +393,28 @@ h1 {
     align-items: center;
 }
 
+.testimonials-content > .jane, .scott, .susie {
+    margin: 15px 0 15px 0;
+}
 
 .testimonials-content img {
     width: 100%;
-    height: 100%;
+    height: 100vw;
     object-fit: cover;
+    
 }
 
+.jane-img::before, 
+.scott-img::before,
+.susie-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 .quote {
     color: white;
@@ -360,8 +423,6 @@ h1 {
 .name {
     color: #D69E3D;
 }
-
-
 
 
 /* FOOTER */
@@ -418,6 +479,47 @@ h1 {
 
     button {
         font-size: 1rem;
+    }
+
+    .offer-section, .about-section, .testimonial-section {
+        flex-direction: row;
+    }
+
+    welcome-section > .welcome-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-size: cover;
+        height: auto;
+        width: 100%;
+        row-gap: 10px;
+        column-gap: 15px;
+        object-fit: cover;
+    }
+    
+    .welcome-content > .latte {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    
+    .welcome-content > .coffee-beans {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .welcome-content > .pouring {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    
+    .welcome-content > .three-cups {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    
+    .welcome-content > .smiling {
+        grid-column: 4;
+        grid-row: 2;
     }
     
 }
